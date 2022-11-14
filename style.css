@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Шапка */
+
+.header {
+    background-color: #0A0A0A;
+    color: #717171;
+}
+.nav {
+}
+.menu {
+}
+.menu_item {
+}
+.logo {
+}
+.ic_logo {
+}
+.phone {
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    height: 113px;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 30px;
+}
+.menu {
+
+}
+.logo {
+    font-size: 48px;
+}
