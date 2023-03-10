@@ -48,12 +48,16 @@ ul {
     flex-basis: 0;
 }
 
-.menu_item {
+.menu-item {
     padding-right: 30px;
 }
 
-.menu_item:nth-last-child(1) {
+.menu-item:nth-last-child(1) {
     padding-right: 0px;
+}
+
+.menu-btn {
+    display: none;
 }
 
 .phone {
@@ -82,7 +86,7 @@ ul {
     margin-bottom: 25px;
     
 }
-.headline-btn {
+.headline_btn {
     display: inline-block;
     font-weight: 700;
     font-size: 24px;
@@ -128,7 +132,7 @@ ul {
     font-weight: 700;
 }
 .new_img {
-    margin-left: 190px;
+    margin-left: 191px;
 }
 
 /* Выбор цвета */
@@ -184,6 +188,12 @@ ul {
     width: 100%;
     margin-bottom: 20px;
     background-color: #574B63;
+}
+input:focus {
+    outline: none;
+}
+input, textarea {
+    color: #fff;
 }
 
 .contacts_input::placeholder {
@@ -243,6 +253,131 @@ ul {
     .headline-img {
         max-width: 100%;
     }
+    .contacts_inner {
+        display: block;
+    }
+    .contacts_form {
+        width: auto;
+    }
+    .contacts_title {
+        text-align: center;
+    }
+    .contacts_img {
+        width: 100%;
+    }
+    .contacts {
+        background-color: #574B63;
+    }
+}
+
+@media (max-width: 940px) {
+    .new_img {
+        display: none;
+    }
+    .new_text p,
+    .new_text b {
+        max-width: 100%;
+    }
+    .color_list {
+        flex-wrap: wrap;
+    }
+    .color_item {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .phone {
+        text-align: center;
+    }
+    .menu-btn {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        order: 1;
+        z-index: 50;
+    }
+    .logo, .phone {
+        position: relative;
+        z-index: 50;
+    }
+    .btn-line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 2px;
+        transition: .5s ease;
+    }
+    .btn-line:nth-child(1) {
+        top: 0;
+    }
+    .btn-line:nth-child(2) {
+        top: 20px;
+    }
+    .btn-line:nth-child(3) {
+        top: 20px;
+    }
+    .btn-line:nth-child(4) {
+        top: 40px;
+    }
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #0A0A0A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: .5s all;
+    }
+    .nav_active .menu {
+        transform: translateY(0);
+    }
+    .menu-item {
+        padding-right: 0;
+        padding: 30px 0;
+        font-size: 50px;
+    }
+    .nav_active .btn-line:nth-child(1) {
+        transform: scaleX(0);
+    }
+    .nav_active .btn-line:nth-child(2) {
+        transform: rotate(45deg);
+    }
+    .nav_active .btn-line:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    .nav_active .btn-line:nth-child(4) {
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .headline, .new {
+        padding: 50px 0;
+    }
+    .color {
+        padding-bottom: 50px;
+    }
+    .contacts_form {
+        padding: 50px 70px;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer_inner {
+        flex-direction: column;
+    }
+    .footer img {
+        margin: 15px 0;
+    }
 }
 
 @media (max-width: 560px) {
@@ -250,10 +385,38 @@ ul {
         font-size: 34px;
         line-height: 42px;
     }
-    
-    .headline-btn {
+    .new_title, .color_title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .headline_btn {
         font-size: 18px;
         line-height: 22px;
         padding: 16px 90px;
+    }
+        .color_item, .color_item img {
+        width: 100%;
+    }
+    .contacts_form {
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 420px) {
+    .phone {
+        flex-basis: auto;
+    }
+    .nav {
+        flex-wrap: wrap;
+    }
+    .menu-item {
+        font-size: 40px;
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .contacts_form {
+        padding: 50px 10px;
     }
 }
